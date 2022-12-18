@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap'); 
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+
+}
+
+
+main {
+    min-height: 100vh;
+    height: 100%;
+    background-color: var(--Light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Barlow Semi Condensed";
+}
+
+
+.container {
+    min-height: 37.5rem;
+    height: 37.5rem;
+    min-width: 71.25rem;
+    width: 71.25rem;
+    display: grid;
+    font-size: .8125rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 308px 292px;
+    grid-template-areas: 
+    "part-1 part-1 part-2 part-5"
+    "part-3 part-4 part-4 part-5" ;
+}
+
+.card {
+    margin: .6875rem .9375rem;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.info {
+    display: flex;
+    align-items: center
+}
+
+.info div >:first-child {
+    color: white;
+    font-weight: 500;
+}
+
+.info div >:last-child {
+    color: white;
+    opacity: 0.5;
+    font-weight: 500;
+
+}
+
+img {
+    width: 2.25rem;
+    border-radius: 50%;
+    padding: 1px;
+    background-color: white;
+    margin-right: 0.75rem;
+}
+
+.card > .small-quote {
+    color: white;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.card > .big-quote {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1.125rem 0;
+}
+
+.Jeanette >:nth-child(n+2), .Kira>:nth-child(n+2){
+    color: var(--Very-dark-grayish-blue);
+}
+
+.Jeanette > .small-quote, .Kira > .small-quote {
+    color: var(--Very-dark-blackish-blue);
+    opacity: 0.7;
+}
+
+.Jeanette .info > img, .Kira .info > img {
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.Jeanette .info div > :first-child, .Kira .info div > :first-child {
+    color: var(--Very-dark-blackish-blue);
+}
+
+.Jeanette .info div > :last-child, .Kira .info div > :last-child {
+    color: var(--Very-dark-blackish-blue);
+}
+    
+
+.Daniel {
+    grid-area: part-1;
+    background-color: var(--Moderate-violet);
+}
+.Jonathan {
+    grid-area: part-2;
+    background-color: var(--Very-dark-grayish-blue);
+}
+.Jeanette {
+    grid-area: part-3;
+    background-color: white;
+}
+.Patrick {
+    grid-area: part-4;
+    background-color: var(--Very-dark-blackish-blue);
+}
+.Kira {
+    grid-area: part-5;
+    background-color: white;
+}
